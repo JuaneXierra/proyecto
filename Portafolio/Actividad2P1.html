@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio</title>
+    <link rel="stylesheet" href="./estilos.css">
+</head>
+<style>
+      .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .gallery img {
+            max-width: 100%;
+            height: auto;
+        }
+        h2 {
+            color: white;
+        }
+        section {
+            padding: 20px;
+        }
+        .navbar a:hover {
+            color: #ffd700;
+        }
+        .navbar {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .home {
+            height: 130vh ;
+        }
+        .specs {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        table, th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        } 
+        
+        tr {
+            background-color: #333;
+            color: #fff
+        }   
+</style>
+<body>
+    <nav class="nav">
+        <div class="nav__container">
+            <h1 class="nav__title">Portafolio 11-2</h1>
+            <a href="#menu" class="nav__menu">
+                <img src="./assets/menu.svg" class="nav__icon">
+            </a>
+            <a href="#" class="nav__menu nav__menu--second">
+                <img src="./assets/close.svg" class="nav__icon ">
+            </a>
+            <ul class="dropdown" id="menu">
+                <li class="dropdown__list">
+                    <a href="index.html" class="dropdown__link">
+                        <img src="./assets/house.svg" class="dropdown__icon">
+                        <span class="dropdown__span">Inicio</span>
+                    </a>
+                </li>
+                <li class="dropdown__list">
+                    <a href="#" class="dropdown__link">
+                        <img src="./assets/projects.svg" class="dropdown__icon">
+                        <span class="dropdown__span">Primer Periodo</span>
+                        <img src="./assets/down.svg" class="dropdown__arrow">
+                        <input type="checkbox" class="dropdown__check">
+                    </a>
+                    <div class="dropdown__content">
+                        <ul class="dropdown__sub">
+                            <li class="dropdown__li">
+                                <a href="Actividad1P1.html" class="dropdown__anchor">Actividad 1</a>
+                            </li>
+                            <li class="dropdown__li">
+                                <a href="Actividad2P1.html" class="dropdown__anchor">Actividad 2</a>
+                            </li>
+                            <li class="dropdown__li">
+                                <a href="Actividad3P1.php" class="dropdown__anchor">Actividad 3</a>
+                            </li>
+                            <li class="dropdown__li">
+                                <a href="Actividad4P1.php" class="dropdown__anchor">Actividad 4</a>
+                            </li>
+                            <li class="dropdown__li">
+                                <a href="Actividad5P1.php" class="dropdown__anchor">Actividad 5 </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="dropdown__list">
+                    <a href="#" class="dropdown__link">
+                        <img src="./assets/projects.svg" class="dropdown__icon">
+                        <span class="dropdown__span">Segundo Periodo</span>
+                        <img src="./assets/down.svg" class="dropdown__arrow">
+                        <input type="checkbox" class="dropdown__check">
+                    </a>
+                    <div class="dropdown__content">
+                        <ul class="dropdown__sub">
+                            <li class="dropdown__li">
+                                <a href="Actividad1P2.php" class="dropdown__anchor">Actividad 1</a>
+                            </li>
+                            <li class="dropdown__li">
+                                <a href="Actividad2P2.php" class="dropdown__anchor">Actividad 2</a>
+                            </li>
+                            <li class="dropdown__li">
+                                <a href="Quiz.php" class="dropdown__anchor">Quiz</a>
+                            </li>
+                            <li class="dropdown__li">
+                                <a href="a.php" class="dropdown__anchor">Recuperacion</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="dropdown__list">
+                    <a href="#" class="dropdown__link">
+                        <img src="./assets/projects.svg" class="dropdown__icon">
+                        <span class="dropdown__span">Tercer Periodo</span>
+                        <img src="./assets/down.svg" class="dropdown__arrow">
+                        <input type="checkbox" class="dropdown__check">
+                    </a>
+                    <div class="dropdown__content">
+                        <ul class="dropdown__sub">
+                            <li class="dropdown__li">
+                                <a href="competenciasP3.php" class="dropdown__anchor">Competencias</a>
+                            </li>
+                            <li class="dropdown__li">
+                                <a href="Actividad1P3.php" class="dropdown__anchor">Actividad 2</a>
+                            </li>
+                            <li class="dropdown__li">
+                                <a href="Actividad3P3.php" class="dropdown__anchor">Actividad 3</a>
+                            </li>
+                            <li class="dropdown__li">
+                                <a href="Quiz2.php" class="dropdown__anchor">Quiz</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <section class="home">
+        <div class="home-Content">
+            <header>
+                <p></p>
+                <h1>Porsche 911 GT3</h1>
+            </header>
+            <nav class="navbar">
+                <a href="#inicio">Inicio</a>
+                <a href="#especificaciones">Especificaciones</a>
+                <a href="#galeria">Galería</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+            <section id="inicio">
+                <h2>¡Bienvenido a la página del Porsche 911 GT3!</h2>
+                <p>El Porsche 911 GT3 RS es una variante de alto rendimiento del icónico Porsche 911, diseñada específicamente para brindar una experiencia de conducción deportiva extrema en pistas y carreteras. Este automóvil deportivo de lujo combina la elegancia clásica del 911 con un enfoque en la aerodinámica, el rendimiento y la agresividad.</p>
+            </section>
+            <section id="specs">
+                <h2>Especificaciones</h2>
+                <table>
+                    <tr>
+                        <td><strong>Motor:</strong></td>
+                        <td>4.0 litros, 6 cilindros</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Potencia:</strong></td>
+                        <td>520 HP</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Velocidad Máxima:</strong></td>
+                        <td>312 km/h</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Aceleración (0-100 km/h):</strong></td>
+                        <td>3.2 segundos</td>
+                    </tr>
+                </table>
+            </section>
+            <section id="galeria">
+                <h2>Galería</h2>
+                <div class="gallery">
+                    <img src="Imagenes/porsche911gt3rs.jpg" alt="Porsche 911 GT3 Imagen 1" style="max-width: 100%; height: auto;">
+                    <img src="Imagenes/porsche911gt3rs2.jpg" alt="Porsche 911 GT3 Imagen 2" style="max-width: 100%; height: auto;">
+                    <img src="Imagenes/porsche911gt3rs3.jpg" alt="Porsche 911 GT3 Imagen 3" style="max-width: 100%; height: auto;">
+                    <img src="Imagenes/carritoriunrun.jpg" alt="Porsche 911 GT3 Imagen 3" style="max-width: 100%; height: auto;">
+                </div>
+            </section>
+            <section id="contacto">
+                <h2>Contacto</h2>
+                <p>¿Tienes alguna pregunta o comentario? ¡Contáctanos!</p>
+            </section>
+        </div>
+    </section> 
+</body>
+</html>

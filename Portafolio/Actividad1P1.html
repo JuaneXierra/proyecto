@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio</title>
+    <link rel="stylesheet" href="./estilos.css">
+</head>
+<style>
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    h1, h2, p {
+        text-align: center;
+    }
+    h1 {
+        color: white;
+    }
+    button {
+        background-color: #333;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        margin-bottom: 10px;
+        display: block;
+        width: 100%;
+    }
+    .respuesta {
+        display: none;
+        background-color: white;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+</style>
+<body>
+    <nav class="nav">
+        <div class="nav__container">
+            <h1 class="nav__title">Portafolio 11-2</h1>
+            <a href="#menu" class="nav__menu">
+                <img src="./assets/menu.svg" class="nav__icon">
+            </a>
+            <a href="#" class="nav__menu nav__menu--second">
+                <img src="./assets/close.svg" class="nav__icon ">
+            </a>
+            <ul class="dropdown" id="menu">
+                <li class="dropdown__list">
+                    <a href="index.html" class="dropdown__link">
+                        <img src="./assets/house.svg" class="dropdown__icon">
+                        <span class="dropdown__span">Inicio</span>
+                    </a>
+                </li>
+                <li class="dropdown__list">
+                    <a href="#" class="dropdown__link">
+                        <img src="./assets/projects.svg" class="dropdown__icon">
+                        <span class="dropdown__span">Primer Periodo</span>
+                        <img src="./assets/down.svg" class="dropdown__arrow">
+                        <input type="checkbox" class="dropdown__check">
+                    </a>
+                    <div class="dropdown__content">
+                        <ul class="dropdown__sub">
+                            <li class="dropdown__li">
+                                <a href="Actividad1P1.html" class="dropdown__anchor">Actividad 1</a>
+                            </li>
+                            <li class="dropdown__li">
+                                <a href="Actividad2P1.html" class="dropdown__anchor">Actividad 2</a>
+                            </li>
+                            <li class="dropdown__li">
+                                <a href="Actividad3P1.php" class="dropdown__anchor">Actividad 3</a>
+                            </li>
+                            <li class="dropdown__li">
+                                <a href="Actividad4P1.php" class="dropdown__anchor">Actividad 4</a>
+                            </li>
+                            <li class="dropdown__li">
+                                <a href="Actividad5P1.php" class="dropdown__anchor">Actividad 5</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="dropdown__list">
+                    <a href="#" class="dropdown__link">
+                        <img src="./assets/projects.svg" class="dropdown__icon">
+                        <span class="dropdown__span">Segundo Periodo</span>
+                        <img src="./assets/down.svg" class="dropdown__arrow">
+                        <input type="checkbox" class="dropdown__check">
+                    </a>
+                    <div class="dropdown__content">
+                        <ul class="dropdown__sub">
+                            <li class="dropdown__li">
+                                <a href="Actividad1P2.php" class="dropdown__anchor">Actividad 1</a>
+                            </li>
+                            <li class="dropdown__li">
+                                <a href="Actividad2P2.php" class="dropdown__anchor">Actividad 2</a>
+                            </li>
+                            <li class="dropdown__li">
+                                <a href="Quiz.php" class="dropdown__anchor">Quiz</a>
+                            </li>
+                            <li class="dropdown__li">
+                                <a href="a.php" class="dropdown__anchor">Recuperacion</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="dropdown__list">
+                    <a href="#" class="dropdown__link">
+                        <img src="./assets/projects.svg" class="dropdown__icon">
+                        <span class="dropdown__span">Tercer Periodo</span>
+                        <img src="./assets/down.svg" class="dropdown__arrow">
+                        <input type="checkbox" class="dropdown__check">
+                    </a>
+                    <div class="dropdown__content">
+                        <ul class="dropdown__sub">
+                            <li class="dropdown__li">
+                                <a href="competenciasP3.php" class="dropdown__anchor">Competencias</a>
+                            </li>
+                            <li class="dropdown__li">
+                                <a href="Actividad1P3.php" class="dropdown__anchor">Actividad 2</a>
+                            </li>
+                            <li class="dropdown__li">
+                                <a href="Actividad3P3.php" class="dropdown__anchor">Actividad 3</a>
+                            </li>
+                            <li class="dropdown__li">
+                                <a href="Quiz2.php" class="dropdown__anchor">Quiz</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <section class="home">
+        <div class="container">
+            <h1>Preguntas y respuestas sobre PHP</h1>
+            <button onclick="mostrarRespuesta('respuesta1')">¿Qué significa PHP y cuál es su origen?</button>
+            <div id="respuesta1" class="respuesta">
+                <h2>Respuesta:</h2>
+                <p>PHP significa "Hypertext Preprocessor" y es un lenguaje de programación de código abierto especialmente diseñado para el desarrollo web.</p>
+            </div>
+    
+            <button onclick="mostrarRespuesta('respuesta2')">¿Por qué PHP es relevante en el desarrollo web?</button>
+            <div id="respuesta2" class="respuesta">
+                <h2>Respuesta:</h2>
+                <p>PHP es relevante en el desarrollo web debido a su facilidad de aprendizaje, integración con HTML, amplia disponibilidad de recursos y capacidad para trabajar con diferentes sistemas operativos y servidores web.</p>
+            </div>
+    
+            <button onclick="mostrarRespuesta('respuesta3')">Enumera algunas características clave de PHP como lenguaje de programación.</button>
+            <div id="respuesta3" class="respuesta">
+                <h2>Respuesta:</h2>
+                <p>Algunas características clave de PHP incluyen ser interpretado, tipado dinámico, soporte para diferentes bases de datos, amplia disponibilidad de bibliotecas y extensiones, integración sencilla con HTML y una gran comunidad de usuarios.</p>
+            </div>
+    
+            <button onclick="mostrarRespuesta('respuesta4')">¿Qué ventajas ofrece PHP en comparación con otros lenguajes de programación para el desarrollo web?</button>
+            <div id="respuesta4" class="respuesta">
+                <h2>Respuesta:</h2>
+                <p>Algunas ventajas de PHP sobre otros lenguajes para el desarrollo web incluyen su facilidad de aprendizaje, su integración con HTML, su amplia disponibilidad de recursos y su capacidad para trabajar con diferentes sistemas operativos y servidores web.</p>
+            </div>
+    
+            <button onclick="mostrarRespuesta('respuesta5')">¿Cuál es la sintaxis básica de PHP?</button>
+            <div id="respuesta5" class="respuesta">
+                <h2>Respuesta:</h2>
+                <p>La sintaxis básica de PHP se inicia con <code>&lt;?php</code> y finaliza con <code>?&gt;</code>.</p>
+            </div>
+    
+            <button onclick="mostrarRespuesta('respuesta6')">Explora las estructuras de control (condicionales y bucles) en PHP.</button>
+            <div id="respuesta6" class="respuesta">
+                <h2>Respuesta:</h2>
+                <p>Las estructuras de control en PHP incluyen condicionales (if, else if, else) y bucles (for, while, do-while).</p>
+            </div>
+    
+            <button onclick="mostrarRespuesta('respuesta7')">¿Cómo se declaran y utilizan las variables en PHP?</button>
+            <div id="respuesta7" class="respuesta">
+                <h2>Respuesta:</h2>
+                <p>Las variables en PHP se declaran con el símbolo <code>$</code>, seguido del nombre de la variable. Por ejemplo: <code>$nombre_variable = valor;</code></p>
+            </div>
+    
+            <button onclick="mostrarRespuesta('respuesta8')">Describe los tipos de datos más comunes en PHP.</button>
+            <div id="respuesta8" class="respuesta">
+                <h2>Respuesta:</h2>
+                <p>Algunos tipos de datos comunes en PHP incluyen strings, integers, floats, arrays, booleans, objetos y recursos.</p>
+            </div>
+    
+            <button onclick="mostrarRespuesta('respuesta9')">¿Qué son las funciones en PHP y cómo se definen?</button>
+            <div id="respuesta9" class="respuesta">
+                <h2>Respuesta:</h2>
+                <p>Las funciones en PHP permiten encapsular un conjunto de instrucciones para su reutilización. Se definen con la palabra clave <code>function</code>. Por ejemplo: <code>function nombre_funcion() { // Código de la función aquí }</code></p>
+            </div>
+    
+            <button onclick="mostrarRespuesta('respuesta10')">Investiga algunas bibliotecas y extensiones populares de PHP utilizadas en el desarrollo web.</button>
+            <div id="respuesta10" class="respuesta">
+                <h2>Respuesta:</h2>
+                <p>Algunas bibliotecas y extensiones populares de PHP incluyen Symfony, Laravel, CodeIgniter, Zend Framework, entre otras.</p>
+            </div>
+    
+            <button onclick="mostrarRespuesta('respuesta11')">Investiga sobre las tendencias actuales en el desarrollo web con PHP.</button>
+            <div id="respuesta11" class="respuesta">
+                <h2>Respuesta:</h2>
+                <p>Las tendencias actuales en el desarrollo web con PHP incluyen el uso de frameworks modernos como Laravel y Symfony, así como el enfoque en la seguridad y el rendimiento de las aplicaciones web.</p>
+            </div>
+    
+            <button onclick="mostrarRespuesta('respuesta12')">¿Qué nuevas características o actualizaciones se han introducido en versiones recientes de PHP?</button>
+            <div id="respuesta12" class="respuesta">
+                <h2>Respuesta:</h2>
+                <p>Algunas características nuevas introducidas en versiones recientes de PHP incluyen PHP 8.0 que introdujo características como el JIT (Just-In-Time Compiler), Union Types, Named Arguments, y más. PHP 7.x mejoró significativamente el rendimiento y la eficiencia del lenguaje. Además, se realizan actualizaciones constantes en las funciones y bibliotecas para mejorar la seguridad y la estabilidad del lenguaje.</p>
+            </div>
+        </div>
+    </section>
+    <script>
+        function mostrarRespuesta(idRespuesta) {
+            var respuesta = document.getElementById(idRespuesta);
+            if (respuesta.style.display === "none") {
+                respuesta.style.display = "block";
+            } else {
+                respuesta.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
